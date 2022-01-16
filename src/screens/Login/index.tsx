@@ -1,7 +1,14 @@
 import React from "react";
 import { Container, FormContainer,MutedLink,ButtonLinks,Input,SubmitButton,SubmitText, SignUpButton, SignUpText } from "../../database/styles/styles";
+import {useNavigation} from '@react-navigation/native';
+
+
 
 export default function Login() {
+    const navigation: void | any = useNavigation();
+    const handleRegister = () => {
+        navigation.navigate('SignUp');
+      };
     return (
       <Container>
           <FormContainer>
@@ -14,9 +21,9 @@ export default function Login() {
           <SubmitButton>
               <SubmitText>Entrar</SubmitText>
           </SubmitButton> 
-          <SignUpButton>
-            <SignUpText>Cadastrar</SignUpText>    
-          </SignUpButton>         
+          <SignUpButton onPress={handleRegister}>
+            <SignUpText >Cadastrar</SignUpText>     
+         </SignUpButton>         
       </Container>
     );
   }
