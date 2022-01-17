@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, FormContainer, Input, SignUpButton, SignUpText } from "../../styles/styles";
+import { Container, FormContainer, Input, SignUpButton, SignUpText, ButtonLinks, MutedLink } from "../../styles/styles";
 import firebase from "../../database/firebase";
 
 const SignUp: React.FC = (props) => {
@@ -65,6 +65,9 @@ const SignUp: React.FC = (props) => {
       <SignUpButton onPress={handleSignUp}>
         <SignUpText>Cadastrar</SignUpText>
       </SignUpButton>
+      <ButtonLinks  onPress={() => { props.navigation.navigate('Login') } }>
+        <MutedLink>Login</MutedLink>
+      </ButtonLinks>
     </Container>
   );
 }

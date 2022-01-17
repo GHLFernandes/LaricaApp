@@ -1,10 +1,7 @@
 import React from 'react';
-import { SafeAreaView, Text, StatusBar, TouchableOpacity } from 'react-native';
+import { Text, StatusBar } from 'react-native';
 import firebase from '../../database/firebase';
 import { Container, MutedLink } from "../../styles/styles";
-
-
-// import { Container } from './styles';
 
 const Home: React.FC = (props) => {
   const handleSignOut = async () => {
