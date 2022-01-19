@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, StatusBar } from 'react-native';
 import firebase from '../../database/firebase';
-import { Container, MutedLink } from "../../styles/styles";
+import { Container, SignUpButton ,SignUpText } from "../../styles/styles";
 
 const Home: React.FC = (props) => {
   const handleSignOut = async () => {
@@ -18,11 +18,11 @@ const Home: React.FC = (props) => {
     <Container>
       <StatusBar />
       <Text>HOME</Text>
-      <MutedLink
+      <SignUpButton
         onPress={handleSignOut}
       >
-        <Text >Sair</Text>
-      </MutedLink>
+        <SignUpText >Sair</SignUpText>
+      </SignUpButton>
     </Container>
   );
 }
