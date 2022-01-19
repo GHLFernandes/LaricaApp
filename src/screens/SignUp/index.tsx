@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { Container, FormContainer, Input, SignUpButton, SignUpText, ButtonLinks, MutedLink } from "../../styles/styles";
+import { Container, FormContainer, Input, SignUpButton, SignUpText, SubmitText, SubmitButton, MutedLink, Logo } from "../../styles/styles";
 import firebase from "../../database/firebase";
+
+import logo from '../../../assets/icon.png';
 
 const SignUp: React.FC = (props) => {
 
@@ -41,17 +43,24 @@ const SignUp: React.FC = (props) => {
 
   return (
     <Container>
+      <Logo source={logo} />
       <FormContainer>
         <Input
           placeholder="Nome Completo:"
+          autoComplete="name"
+          onFocus={() => {
+            
+          }}
           onChangeText={value => handleChangeText('name', value)} />
         <Input
           keyboardType='email-address'
           placeholder="E-mail:"
+          autoComplete="email"
           onChangeText={value => handleChangeText('email', value)} />
         <Input
           keyboardType='phone-pad'
           placeholder="Telefone:"
+          autoComplete="tel-device"
           onChangeText={value => handleChangeText('phone', value)}
         />
         <Input
@@ -62,12 +71,12 @@ const SignUp: React.FC = (props) => {
           secureTextEntry
         />
       </FormContainer>
-      <SignUpButton onPress={handleSignUp}>
-        <SignUpText>Cadastrar</SignUpText>
+      <SubmitButton onPress={handleSignUp}>
+        <SubmitText>Cadastrar</SubmitText>
+      </SubmitButton>
+      <SignUpButton onPress={() => { props.navigation.navigate('Login') }}>
+        <SignUpText>Login</SignUpText>
       </SignUpButton>
-      <ButtonLinks  onPress={() => { props.navigation.navigate('Login') } }>
-        <MutedLink>Login</MutedLink>
-      </ButtonLinks>
     </Container>
   );
 }
