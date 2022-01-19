@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Container, FormContainer, Input, SignUpButton, SignUpText, SubmitText, SubmitButton, MutedLink, Logo } from "../../styles/styles";
-import firebase from "../../database/firebase";
+import { handleSignUp } from "../../functions/functions";
 
 import logo from '../../../assets/icon.png';
 
@@ -18,28 +18,7 @@ const SignUp: React.FC = (props) => {
     setState({ ...state, [name]: value });
   };
 
-  const handleSignUp = async () => {
-    //verifico se todos os campos são válidos minimamente
-    if (state.name === '' || state.email === '' || state.phone === '' || state.pass === '') {
-      alert("Todos os campos são obrigatórios");
-    } else {        //caso seja, realizar a criação do usuário no bd e na autenticação 
-      firebase.auth
-        .createUserWithEmailAndPassword(state.email, state.pass)
-        .then(userCredentials => {
-          const user = userCredentials.user;
-          console.log("Usuário '", user.email + "' registrado");
-        })
-        .catch(error => alert(error.message));
-
-      await firebase.db.collection('users').add({
-        name: state.name,
-        email: state.email,
-        phone: state.phone,
-        pass: state.pass
-      });
-      alert("Usuário registrado com sucesso!");
-    }
-  };
+  handleSignUp(state);
 
   return (
     <Container>
@@ -49,7 +28,7 @@ const SignUp: React.FC = (props) => {
           placeholder="Nome Completo:"
           autoComplete="name"
           onFocus={() => {
-            
+
           }}
           onChangeText={value => handleChangeText('name', value)} />
         <Input
@@ -71,7 +50,12 @@ const SignUp: React.FC = (props) => {
           secureTextEntry
         />
       </FormContainer>
-      <SubmitButton onPress={handleSignUp}>
+      <SubmitButton
+        onPress={() => {
+          handleSignUp(state)
+        }
+      }
+      >
         <SubmitText>Cadastrar</SubmitText>
       </SubmitButton>
       <SignUpButton onPress={() => { props.navigation.navigate('Login') }}>

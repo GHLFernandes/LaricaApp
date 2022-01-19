@@ -3,11 +3,11 @@ import { Text, StatusBar } from 'react-native';
 import { Container, SignUpButton, SignUpText } from "../../styles/styles";
 import { handleSignOut } from "../../functions/functions";
 
-const Home = (props: any) => {
+const Dispensa = (props) => {
     return (
         <Container>
             <StatusBar />
-            <Text>HOME</Text>
+            <Text>DISPENSA</Text>
             <SignUpButton
                 onPress={() => {
                     handleSignOut(props)
@@ -20,4 +20,4 @@ const Home = (props: any) => {
     );
 };
 
-export default Home;
+export default Dispensa;
