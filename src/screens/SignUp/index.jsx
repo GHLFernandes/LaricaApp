@@ -1,10 +1,17 @@
 import React, { useState } from "react";
-import { Container, FormContainer, Input, SignUpButton, SignUpText, SubmitText, SubmitButton, MutedLink, Logo } from "../../styles/styles";
-import { handleSignUp } from "../../functions/functions";
+import { handleSignUp } from "../../functions";
+import { Container } from '../../components/Container';
+import { Logo } from '../../components/Logo';
+import { Form } from '../../components/Form';
+import { Input } from '../../components/Input';
+import { SubmitBtn } from '../../components/SubmitBtn';
+import { SubmitBtnTxt } from '../../components/SubmitBtnTxt';
+import { ActionBtn } from '../../components/ActionBtn';
+import { ActionBtnTxt } from '../../components/ActionBtnTxt';
 
 import logo from '../../../assets/icon.png';
 
-const SignUp: React.FC = (props) => {
+const SignUp = (props) => {
 
   const [state, setState] = useState({
     name: "",
@@ -14,7 +21,7 @@ const SignUp: React.FC = (props) => {
     policy: false
   })
 
-  const handleChangeText = (name: any, value: any) => {
+  const handleChangeText = (name, value) => {
     setState({ ...state, [name]: value });
   };
 
@@ -23,7 +30,7 @@ const SignUp: React.FC = (props) => {
   return (
     <Container>
       <Logo source={logo} />
-      <FormContainer>
+      <Form>
         <Input
           placeholder="Nome Completo:"
           autoComplete="name"
@@ -49,18 +56,18 @@ const SignUp: React.FC = (props) => {
           minLength={8}
           secureTextEntry
         />
-      </FormContainer>
-      <SubmitButton
+      </Form>
+      <SubmitBtn
         onPress={() => {
           handleSignUp(state)
         }
       }
       >
-        <SubmitText>Cadastrar</SubmitText>
-      </SubmitButton>
-      <SignUpButton onPress={() => { props.navigation.navigate('Login') }}>
-        <SignUpText>Login</SignUpText>
-      </SignUpButton>
+        <SubmitBtnTxt>Cadastrar</SubmitBtnTxt>
+      </SubmitBtn>
+      <ActionBtn onPress={() => { props.navigation.navigate('Login') }}>
+        <ActionBtnTxt>Login</ActionBtnTxt>
+      </ActionBtn>
     </Container>
   );
 }

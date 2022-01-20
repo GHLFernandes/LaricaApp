@@ -2,7 +2,11 @@ import firebase from "../database/firebase";
 
 export const verificaCampos = async (state) => {
 
-}
+};
+
+export const acessaPerfil = ({navigation}) => {
+    navigation.navigate('Perfil');
+};
 
 export const handleSignUp = async (state) => {
     //caso seja, realizar a criação do usuário no bd e na autenticação 
