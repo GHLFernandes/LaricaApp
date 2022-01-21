@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { FontAwesome } from '@expo/vector-icons';
 import { corPrimaria, corPrimariaClaro } from './components/UI/variaveis';
+import { Dimensions } from 'react-native';
 
 import Login from './screens/Login';
 import SignUp from './screens/SignUp';
@@ -15,6 +16,7 @@ import Receitas from './screens/Receitas';
 import { Header, HeaderTitle } from './components/Header';
 
 const Stack = createNativeStackNavigator();
+const { width: screenWidth } = Dimensions.get('window');
 
 const Rotas = () => {
     const Tab = createBottomTabNavigator();
@@ -54,7 +56,7 @@ const Rotas = () => {
                     tabBarInactiveTintColor: `${corPrimariaClaro}`,
                     tabBarHideOnKeyboard: true,
                     tabBarStyle: {
-                        height: 55,
+                        height: screenWidth - 200,
                         width: '100%',
                         paddingTop: 1,
                         backgroundColor: `${corPrimaria}`,
