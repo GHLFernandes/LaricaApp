@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { FontAwesome } from '@expo/vector-icons';
 import logo from '../../../assets/icon.png';
-import { corPrimaria } from '../../components/UI/variaveis';
+import { corPrimaria, corPrimariaClaro } from '../../components/UI/variaveis';
 
 export const LogoTxt = styled.Text `
     font-family: LobsterRegular;
@@ -20,7 +20,7 @@ const HeaderContainer = styled.View.attrs({
     alignItems: 'center',
     backgroundColor: 'white',
     borderBottomWidth: 1,
-    borderBottomColor: '#e0e0e0',
+    borderBottomColor: `${corPrimariaClaro}`,
 })
 ``;
 
