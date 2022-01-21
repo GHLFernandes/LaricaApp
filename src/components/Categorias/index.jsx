@@ -62,8 +62,14 @@ export default () => {
                     marginHorizontal: 20
                 }}
                 size={size}
+<<<<<<< HEAD
                 color={corPrimariaClaro}
                 onPress={() => console.log('hello')} />
+=======
+                color={corPrimaria}
+                onPress={() => console.log('hello')} />
+
+>>>>>>> af5b7a7... atualização ícones categoria
 
         </View>
     );
