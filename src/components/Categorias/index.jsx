@@ -1,10 +1,17 @@
 import React from 'react';
 import { View } from 'react-native';
+<<<<<<< HEAD
 import { FontAwesome } from '@expo/vector-icons';
 import { corPrimaria, corPrimariaClaro } from '../UI/variaveis';
 
 export default () => {
     const size = 40;
+=======
+import { Icon } from 'react-native-elements';
+import { corPrimaria, corPrimariaClaro } from '../UI/variaveis';
+
+export default () => {
+>>>>>>> 9fa29b6dc6f88a8f5b58bc1a5ae8792de9d3b118
     return (
         <View
             style={{
@@ -21,6 +28,7 @@ export default () => {
             }}
         >
 
+<<<<<<< HEAD
             <FontAwesome
                 name='home'
                 style={style.icon}
@@ -54,6 +62,46 @@ export default () => {
 
             <FontAwesome
                 size={size}
+=======
+            <Icon
+                raised
+                name='heartbeat'
+                type='font-awesome'
+                color={corPrimaria}
+                onPress={() => console.log('hello')} />
+
+            <Icon
+                raised
+                name='heartbeat'
+                type='font-awesome'
+                color={corPrimaria}
+                onPress={() => console.log('hello')} />
+
+            <Icon
+                raised
+                name='heartbeat'
+                type='font-awesome'
+                color={corPrimaria}
+                onPress={() => console.log('hello')} />
+
+            <Icon
+                raised
+                name='heartbeat'
+                type='font-awesome'
+                color={corPrimaria}
+                onPress={() => console.log('hello')} />
+
+            <Icon
+                raised
+                name='heartbeat'
+                type='font-awesome'
+                color={corPrimaria}
+                onPress={() => console.log('hello')} />
+
+            <Icon
+                raised
+                reverseColor={corPrimaria}
+>>>>>>> 9fa29b6dc6f88a8f5b58bc1a5ae8792de9d3b118
                 name='heartbeat'
                 type='font-awesome'
                 color={corPrimaria}
