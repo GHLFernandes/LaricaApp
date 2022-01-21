@@ -1,4 +1,5 @@
 import React from 'react';
+import {Platform} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -56,7 +57,7 @@ const Rotas = () => {
                     tabBarInactiveTintColor: `${corPrimariaClaro}`,
                     tabBarHideOnKeyboard: true,
                     tabBarStyle: {
-                        height: 60,
+                        height: Platform.OS === 'ios' ? 80 : 60,
                         width: '100%',
                         paddingTop: 1,
                         backgroundColor: `${corPrimaria}`,
