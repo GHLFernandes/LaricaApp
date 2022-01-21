@@ -21,7 +21,7 @@ export default function App() {
   }
 
   return (<>
-    <StatusBar backgroundColor="white" barStyle='dark-content' />
+    
     <Rotas />
   </>
   );

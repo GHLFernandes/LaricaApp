@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView } from 'react-native';
+import { ScrollView, StatusBar } from 'react-native';
 import { Container } from '../../components/Container';
 import MyCarousel from '../../components/Carousel';
 import Categorias from '../../components/Categorias';
@@ -9,6 +9,7 @@ import AppLoading from 'expo-app-loading';
 const Home = () => {
     return (
         <Container>
+            <StatusBar backgroundColor="black" barStyle='dark-content' />
             <ScrollView>
                 <MyCarousel />
                 <Categorias />

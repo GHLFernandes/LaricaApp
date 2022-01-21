@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { FontAwesome } from '@expo/vector-icons';
 import logo from '../../../assets/icon.png';
 import { corPrimaria, corPrimariaClaro } from '../../components/UI/variaveis';
-
+import { Platform } from 'react-native';
 export const LogoTxt = styled.Text `
     font-family: LobsterRegular;
     font-size: 20px;
@@ -21,6 +21,7 @@ const HeaderContainer = styled.View.attrs({
     backgroundColor: 'white',
     borderBottomWidth: 1,
     borderBottomColor: `${corPrimariaClaro}`,
+    marginTop: Platform.OS === 'ios' ? 40 : 0
 })
 ``;
 
