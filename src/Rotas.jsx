@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { FontAwesome } from '@expo/vector-icons';
+import { corPrimaria, corPrimariaClaro } from './components/UI/variaveis';
 
 import Login from './screens/Login';
 import SignUp from './screens/SignUp';
@@ -21,7 +22,11 @@ const Rotas = () => {
     const PaginaInicial = () => {
         return (
             <Tab.Navigator
+                initialRouteName={Home}
                 screenOptions={({ route }) => ({
+                    header: (props) => (
+                        <Header {...props} />
+                    ),
                     tabBarIcon: ({ focused, color, size }) => {
                         let iconName;
 
@@ -33,44 +38,43 @@ const Rotas = () => {
                             iconName = focused ? 'list-ul' : 'list-ul';
                         } else if (route.name === 'Dispensa') {
                             iconName = focused ? 'th-large' : 'th-large';
+                        } else if (route.name === 'Perfil') {
+                            iconName = focused ? 'user' : 'user';
                         }
 
-                        size = 28;
+                        size = 25;
 
                         // You can return any component that you like here!
                         return <FontAwesome name={iconName} size={size} color={color} />;
                     },
-                    header: (props) => (
-                        <Header {...props} />
-                    ),
-                    tabBarItemStyle:{
+                    tabBarItemStyle: {
                         backgroundColor: 'white'
                     },
-                    tabBarActiveTintColor: '#E19046',
-                    tabBarInactiveTintColor: '#E8C7AB',
+                    tabBarActiveTintColor: `${corPrimaria}`,
+                    tabBarInactiveTintColor: `${corPrimariaClaro}`,
+                    tabBarHideOnKeyboard: true,
                     tabBarStyle: {
-                        height: 58,
+                        height: 55,
                         width: '100%',
-                        paddingTop:1,
-                        backgroundColor: '#E8C7AB',
+                        paddingTop: 1,
+                        backgroundColor: `${corPrimaria}`,
                     },
                     tabBarLabelStyle: {
                         width: '100%',
                         fontWeight: 'bold',
-                        fontSize: 12,
+                        fontSize: 10,
                         lineHeight: 13,
                         marginBottom: 5,
-                        
                         borderLeftWidth: .5,
-                        borderLeftColor: '#E8C7AB',
+                        borderLeftColor: `${corPrimariaClaro}`,
                     },
                     tabBarIconStyle: {
-                        flex:1,
+                        flex: 1,
                         borderLeftWidth: .5,
-                        borderLeftColor: '#E8C7AB', 
+                        borderLeftColor: `${corPrimariaClaro}`,
                         marginTop: 5,
-                        width: '100%', 
-                        textAlign: 'center', 
+                        width: '100%',
+                        textAlign: 'center',
                         justifyContent: 'center',
 
                     },
@@ -78,11 +82,11 @@ const Rotas = () => {
                 }
                 )}
             >
-                <Tab.Screen name="Home" component={Home} />
-                <Tab.Screen name="Receitas" component={Receitas} />
                 <Tab.Screen name="Lista" component={Lista} />
-                <Tab.Screen name="Dispensa"
-                    component={Dispensa} />
+                <Tab.Screen name="Receitas" component={Receitas} />
+                <Tab.Screen name="Home" component={Home} />
+                <Tab.Screen name="Dispensa" component={Dispensa} />
+                <Tab.Screen name="Perfil" component={Perfil} />
             </Tab.Navigator>
         );
     };

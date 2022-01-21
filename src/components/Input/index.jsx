@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { corPrimariaClaro } from '../../components/UI/variaveis';
 
 export const Input = styled.TextInput `
 width: 100%;
@@ -10,5 +11,5 @@ margin-top: 10px;
 padding: 10px 10px;
 font-size: 12px;
 font-family: MontserratRegular;
-border-color: #e8c7ab;
+border-color: ${corPrimariaClaro};
 `;

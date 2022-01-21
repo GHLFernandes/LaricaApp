@@ -1,7 +1,16 @@
 import styled from 'styled-components';
 import { FontAwesome } from '@expo/vector-icons';
 import logo from '../../../assets/icon.png';
-import { acessaPerfil } from '../../functions';
+import { corPrimaria } from '../../components/UI/variaveis';
+
+export const LogoTxt = styled.Text `
+    font-family: LobsterRegular;
+    font-size: 20px;
+    line-height: 20px;
+    color: ${corPrimaria};
+    margin-left: 10px;
+    text-shadow: 0 0 2px #381a00;
+`;
 
 const HeaderContainer = styled.View.attrs({
     flexDirection: 'row',
@@ -20,8 +29,11 @@ const LeftBtnHeader = styled.TouchableOpacity.attrs({
 })
 ``;
 const MiddleHeader = styled.View.attrs({
+    flexDirection: 'row',
+    flex: 1,
     width: '87%',
     alignItems: 'center',
+    justifyContent: 'center'
 })
 ``;
 
@@ -39,13 +51,14 @@ const Header = () => {
     return (
         <HeaderContainer>
             <LeftBtnHeader onPress={() => {  }}> 
-                <FontAwesome name="navicon" size={30} color="#E19046"/>
+                <FontAwesome name="navicon" size={30} color={corPrimaria}/>
             </LeftBtnHeader>
             <MiddleHeader >
                 <LogoHeader source={logo} />
+                <LogoTxt>Larica App</LogoTxt>
             </MiddleHeader>
-            <RightBtnHeader onPress={({navigation}) => {navigation.navigate('Perfil')}}>
-                <FontAwesome name="user" size={30} color="#E19046"/>
+            <RightBtnHeader onPress={() => {} }>
+                <FontAwesome name="gears" size={30} color={corPrimaria}/>
             </RightBtnHeader>
         </HeaderContainer>
     );
