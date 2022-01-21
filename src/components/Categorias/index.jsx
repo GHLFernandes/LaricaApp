@@ -4,16 +4,15 @@ import { FontAwesome } from '@expo/vector-icons';
 import { corPrimaria, corPrimariaClaro } from '../UI/variaveis';
 
 export default () => {
-    const size = 40;
+    const size = 30;
     return (
         <View
             style={{
                 flexGrow: 1,
                 flexDirection: 'row',
-                justifyContent: 'center',
-                alignSelf: 'center',
+                justifyContent: 'flex-start',
                 alignItems: 'center',
-                height: 70,
+                height: 50,
                 width: '100%',
                 borderTopWidth: 2,
                 borderBottomWidth: 2,
@@ -23,40 +22,47 @@ export default () => {
 
             <FontAwesome
                 name='home'
-                style={style.icon}
+                style={{
+                    marginHorizontal: 20
+                }}
                 size={size}
-                color={corPrimaria}
+                color={corPrimariaClaro}
                 onPress={() => console.log('hello')} />
 
             <FontAwesome
                 name='leanpub'
+                style={{
+                    marginHorizontal: 20
+                }}
                 size={size}
-                color={corPrimaria}
+                color={corPrimariaClaro}
                 onPress={() => console.log('hello')} />
 
             <FontAwesome
                 name='list-ul'
+                style={{
+                    marginHorizontal: 20
+                }}
                 size={size}
-                color={corPrimaria}
+                color={corPrimariaClaro}
                 onPress={() => console.log('hello')} />
 
             <FontAwesome
                 name='th-large'
+                style={{
+                    marginHorizontal: 20
+                }}
                 size={size}
-                color={corPrimaria}
+                color={corPrimariaClaro}
                 onPress={() => console.log('hello')} />
 
             <FontAwesome
                 name='user'
+                style={{
+                    marginHorizontal: 20
+                }}
                 size={size}
-                color={corPrimaria}
-                onPress={() => console.log('hello')} />
-
-            <FontAwesome
-                size={size}
-                name='heartbeat'
-                type='font-awesome'
-                color={corPrimaria}
+                color={corPrimariaClaro}
                 onPress={() => console.log('hello')} />
 
         </View>

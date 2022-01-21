@@ -56,7 +56,7 @@ const Rotas = () => {
                     tabBarInactiveTintColor: `${corPrimariaClaro}`,
                     tabBarHideOnKeyboard: true,
                     tabBarStyle: {
-                        height: screenWidth - 200,
+                        height: 60,
                         width: '100%',
                         paddingTop: 1,
                         backgroundColor: `${corPrimaria}`,
@@ -74,7 +74,7 @@ const Rotas = () => {
                         flex: 1,
                         borderLeftWidth: .5,
                         borderLeftColor: `${corPrimariaClaro}`,
-                        marginTop: 5,
+                        marginTop: 2,
                         width: '100%',
                         textAlign: 'center',
                         justifyContent: 'center',
