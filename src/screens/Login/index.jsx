@@ -21,7 +21,7 @@ const Login = (props) => {
   useEffect(() => {
     const unsubscribe = firebase.auth.onAuthStateChanged(user => {
       if (user) {
-        props.navigation.navigate('Perfil');
+        navigation.navigate('PaginaInicial');
       } 
     })
 

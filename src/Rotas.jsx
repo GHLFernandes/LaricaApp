@@ -22,7 +22,7 @@ const Rotas = () => {
     const PaginaInicial = () => {
         return (
             <Tab.Navigator
-                initialRouteName={Home}
+                initialRouteName={'Home'}
                 screenOptions={({ route }) => ({
                     header: (props) => (
                         <Header {...props} />
