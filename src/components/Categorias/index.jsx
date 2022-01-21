@@ -1,9 +1,10 @@
 import React from 'react';
 import { View } from 'react-native';
-import { Icon } from 'react-native-elements';
+import { FontAwesome } from '@expo/vector-icons';
 import { corPrimaria, corPrimariaClaro } from '../UI/variaveis';
 
 export default () => {
+    const size = 40;
     return (
         <View
             style={{
@@ -20,44 +21,39 @@ export default () => {
             }}
         >
 
-            <Icon
-                raised
-                name='heartbeat'
-                type='font-awesome'
+            <FontAwesome
+                name='home'
+                style={style.icon}
+                size={size}
                 color={corPrimaria}
                 onPress={() => console.log('hello')} />
 
-            <Icon
-                raised
-                name='heartbeat'
-                type='font-awesome'
+            <FontAwesome
+                name='leanpub'
+                size={size}
                 color={corPrimaria}
                 onPress={() => console.log('hello')} />
 
-            <Icon
-                raised
-                name='heartbeat'
-                type='font-awesome'
+            <FontAwesome
+                name='list-ul'
+                size={size}
                 color={corPrimaria}
                 onPress={() => console.log('hello')} />
 
-            <Icon
-                raised
-                name='heartbeat'
-                type='font-awesome'
+            <FontAwesome
+                name='th-large'
+                size={size}
                 color={corPrimaria}
                 onPress={() => console.log('hello')} />
 
-            <Icon
-                raised
-                name='heartbeat'
-                type='font-awesome'
+            <FontAwesome
+                name='user'
+                size={size}
                 color={corPrimaria}
                 onPress={() => console.log('hello')} />
 
-            <Icon
-                raised
-                reverseColor={corPrimaria}
+            <FontAwesome
+                size={size}
                 name='heartbeat'
                 type='font-awesome'
                 color={corPrimaria}
