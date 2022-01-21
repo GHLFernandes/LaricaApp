@@ -1,9 +1,10 @@
 import styled from 'styled-components';
+import { corPrimaria } from '../../components/UI/variaveis';
 
 export const SubmitBtn = styled.TouchableOpacity `
   width: 70%;
   height: 38px;
-  background-color: #E19046;
+  background-color: ${corPrimaria};
   justify-content: center;
   align-items: center;
   color: #ccc;
