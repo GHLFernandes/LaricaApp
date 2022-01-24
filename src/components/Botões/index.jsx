@@ -37,3 +37,13 @@ export const SubmitBtnTxt = styled.Text `
  color: #f1faee;
  font-family: MontserratBold;
 `;
+
+export const LeftBtnHeader = styled.TouchableOpacity.attrs({
+  width: '10%',
+})
+``;
+export const RightBtnHeader = styled.TouchableOpacity.attrs({
+  width: '10%',
+})
+``;
+
