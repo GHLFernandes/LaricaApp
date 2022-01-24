@@ -17,7 +17,6 @@ import Receitas from './screens/Receitas';
 import { Header, HeaderTitle } from './components/Header';
 
 const Stack = createNativeStackNavigator();
-const { width: screenWidth } = Dimensions.get('window');
 
 const Rotas = () => {
     const Tab = createBottomTabNavigator();
@@ -65,7 +64,7 @@ const Rotas = () => {
                     tabBarLabelStyle: {
                         width: '100%',
                         fontWeight: 'bold',
-                        fontSize: 10,
+                        fontSize: 10,   
                         lineHeight: 13,
                         marginBottom: 5,
                         borderLeftWidth: .5,
