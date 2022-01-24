@@ -30,7 +30,7 @@ const Dispensa = () => {
                 }}>
                     <View style={{
                         margin: 20,
-                        width: '100%',
+                        width: '90%',
                         height: 700,
                         paddingVertical: 20,
                         backgroundColor: "white",
