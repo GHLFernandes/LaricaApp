@@ -4,8 +4,7 @@ import { Container } from '../../components/Container';
 
 const Dispensa = () => {
     return (
-        <Container>
-            <StatusBar />
+        <Container>            
             <Text>DISPENSA</Text>
         </Container>
     );
