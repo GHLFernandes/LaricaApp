@@ -5,12 +5,9 @@ import { Container } from '../../components/Container';
 import { Logo } from '../../components/Logo';
 import { Form } from '../../components/Form';
 import { Input } from '../../components/Input';
-import { SubmitBtn } from '../../components/SubmitBtn';
-import { SubmitBtnTxt } from '../../components/SubmitBtnTxt';
-import { ActionBtn } from '../../components/ActionBtn';
-import { ActionBtnTxt } from '../../components/ActionBtnTxt';
+import { SubmitBtn, BtnLink, SubmitBtnTxt, ActionBtn, ActionBtnTxt } from '../../components/Botões';
 import { MutedLink } from '../../components/MutedLink';
-import { BtnLink } from "../../components/BtnLink";
+
 
 import logo from '../../../assets/icon.png';
 
