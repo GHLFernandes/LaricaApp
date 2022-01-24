@@ -3,6 +3,11 @@ import { FontAwesome } from '@expo/vector-icons';
 import logo from '../../../assets/icon.png';
 import { corPrimaria, corPrimariaClaro } from '../../components/UI/variaveis';
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 export const LogoTxt = styled.Text`
     font-family: LobsterRegular;
     font-size: 20px;
@@ -46,6 +51,10 @@ const RightBtnHeader = styled.TouchableOpacity.attrs({
     width: '10%',
 })
     ``;
+<<<<<<< Updated upstream
+=======
+>>>>>>> f37ee27... Atualização rotas
+>>>>>>> Stashed changes
 
 const Header = () => {
     return (
