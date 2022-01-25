@@ -1,34 +1,35 @@
 
 import React, { useState } from 'react';
 import { SafeAreaView, View, Text, TextInput, TouchableOpacity, FlatList, StatusBar, StyleSheet } from 'react-native';
+import { corPrimaria, corPrimariaClaro, fundoClaro } from '../../components/UI/variaveis';
+import {InputList, MainListContainer, InputListContainer, TitleListContainer, ListAddBtn, TextAddBtn} from '../../components/Estilos/index';
 import { FontAwesome } from '@expo/vector-icons';
 import useToDoList from '../../hooks/useListaHook';
 
 const Lista = () => {
     const [produto, setProduto] = useState('');
     const [state, add, check, del] = useToDoList();
-
     return (
-        <SafeAreaView style={estilo.container}>
+        <MainListContainer>
             <StatusBar
                 barStyle='dark-content'
             />
-            <Text>LISTA DE COMPRAS</Text>
-            <View style={estilo.inputContainer}>
-                <TextInput style={estilo.input}
-                    placeholder="Adicionar Produto"
-                    placeholderTextColor={'black'}
-                    value={produto}
-                    onChangeText={text => setProduto(text)}
-                />
-                <TouchableOpacity style={estilo.addBtn}
+            <TitleListContainer><Text>LISTA DE COMPRAS</Text></TitleListContainer>            
+            <InputListContainer >                
+                <InputList
+                   placeholder="Adicionar Produto"
+                   placeholderTextColor={'black'}
+                   value={produto}
+                   onChangeText={text => setProduto(text)}
+                 />
+                <ListAddBtn
                     onPress={() => {
                         add(produto);
                         setProduto('');
                     }} >
-                    <Text style={estilo.addBtnTxt}>+</Text>
-                </TouchableOpacity>
-            </View>
+                    <FontAwesome name="plus" size={30} color={corPrimaria} />
+                </ListAddBtn>
+            </InputListContainer>
 
             <FlatList
                 data={state}
@@ -46,7 +47,7 @@ const Lista = () => {
                     </View>
                 )
                 } />
-        </SafeAreaView >
+        </MainListContainer>
     )
 }
 
@@ -66,7 +67,6 @@ const estilo = StyleSheet.create({
     },
     addBtn: {
         width: '20%',
-        marginHorizontal: 2,
         alignItems: 'center',
         alignSelf: 'center'
     },
@@ -78,13 +78,14 @@ const estilo = StyleSheet.create({
     },
     itemsContainer: {
         flexDirection: 'row',
+        backgroundColor: fundoClaro
     },
     itemBtn: {
         flex: 1,
     },
     listItem: {
         fontSize: 22,
-        color: "black",
+        color: "white",
         marginVertical: 3,
         marginHorizontal: 7,
         padding: 10,
