@@ -1,9 +1,8 @@
 import { FontAwesome } from '@expo/vector-icons';
 import logo from '../../../assets/icon.png';
 import { corPrimaria, corPrimariaClaro } from '../../components/UI/variaveis';
-import {HeaderContainer, MiddleHeader} from '../../components/Container';
-import {LogoHeader, LogoTxt} from '../../components/Logo';
-import {LeftBtnHeader, RightBtnHeader} from '../../components/Botões';
+import {HeaderContainer, MiddleHeader, LogoHeader, LogoTxt, RightBtnHeader, LeftBtnHeader} from '../../components/Estilos';
+
 
 const Header = () => {
     return (

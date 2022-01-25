@@ -1,9 +1,9 @@
 import React from 'react';
 import { Text, StatusBar } from 'react-native';
-import { ActionBtn, ActionBtnTxt  } from '../../components/Botões';
+
 
 import { handleSignOut } from "../../functions";
-import { Container } from '../../components/Container';
+import { Container, ActionBtn, ActionBtnTxt } from '../../components/Estilos';
 
 const Perfil = (props) => {
     return (

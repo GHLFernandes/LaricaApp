@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Text, TouchableOpacity, Modal, View } from 'react-native';
-import { Container } from '../../components/Container';
+import { Container } from '../../components/Estilos';
 import Scanner from '../../components/Scanner';
 import { FontAwesome } from '@expo/vector-icons';
 

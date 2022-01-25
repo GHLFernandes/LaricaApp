@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import { handleSignUp } from "../../functions";
-import { Container } from '../../components/Container';
-import { Logo } from '../../components/Logo';
-import { Form } from '../../components/Form';
-import { Input } from '../../components/Input';
-import { SubmitBtn,  ActionBtn, ActionBtnTxt } from '../../components/Botões';
+import { Container, Logo, Form, Input, SubmitBtn,  ActionBtn, ActionBtnTxt, SubmitBtnTxt } from '../../components/Estilos';
+
 
 
 import logo from '../../../assets/icon.png';
