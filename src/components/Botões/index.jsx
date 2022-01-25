@@ -47,3 +47,14 @@ export const RightBtnHeader = styled.TouchableOpacity.attrs({
 })
 ``;
 
+export const NewProduct = styled.TouchableOpacity`
+width: 60px;
+height: 60px;
+position: absolute;
+bottom: 30px;
+right: 20px;
+background-color: ${corPrimaria};
+border-radius: 50px;
+justify-content: center;
+align-items: center;
+`
