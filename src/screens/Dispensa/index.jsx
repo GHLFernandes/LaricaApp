@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Text, TouchableOpacity, Modal, View, FlatList } from 'react-native';
-import { Container, TitleContainer, DispensaContainer,InputList, MainListContainer, InputListContainer,ListAddBtn, ItemsContainer, ItemBtn, DelBtn, ItemChecked } from '../../components/Estilos';
+import { Container, TitleContainer, DispensaContainer,InputList, MainListContainer,Title, InputListContainer,ListAddBtn, ItemsContainer, ItemBtn, DelBtn, ItemChecked } from '../../components/Estilos';
 import Scanner from '../../components/Scanner';
 import { FontAwesome } from '@expo/vector-icons';
 import useToDoList from '../../hooks/useListaHook';
@@ -13,7 +13,7 @@ const Dispensa = () => {
         <Container>
             <DispensaContainer>
             <TitleContainer>
-            <Text>DISPENSA</Text>
+            <Title>DISPENSA</Title>
             </TitleContainer> 
             <MainListContainer> 
             <InputListContainer >                
@@ -28,7 +28,7 @@ const Dispensa = () => {
                         add(produto);
                         setProduto('');
                     }} >
-                    <FontAwesome name="plus" size={30} color={corPrimaria} style={{marginLeft: 150}} />
+                    <FontAwesome name="plus" size={30} color={corPrimaria} style={{marginLeft: Platform.OS === 'ios' ? 150: 170}} />
                 </ListAddBtn>
                 <TouchableOpacity
                     onPress={() => setModalZonesVisible(true)}>

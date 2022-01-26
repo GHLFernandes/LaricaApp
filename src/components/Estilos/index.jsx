@@ -79,7 +79,7 @@ export const InputListContainer = styled.View.attrs({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingHorizontal: 15,    
+    paddingHorizontal: Platform.OS === 'ios' ? 20 : 30,    
     borderRadius: 2,
     borderWidth: 2,
     borderColor: corPrimaria,
