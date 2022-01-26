@@ -1,4 +1,5 @@
 const express = require('express');
+
 const app = express();
 
 const PORT = process.env.PORT || 8877;
@@ -12,3 +13,4 @@ app.get('/', (req, resp) => {
 app.listen(PORT, () => {
     console.log('Rodando na porta: ' + PORT);
 })
+
