@@ -1,12 +1,8 @@
 import React, { useEffect, useState } from "react";
 import firebase from '../../database/firebase';
 import { handleLogin } from "../../functions";
-import { Container } from '../../components/Container';
-import { Logo } from '../../components/Logo';
-import { Form } from '../../components/Form';
-import { Input } from '../../components/Input';
-import { SubmitBtn, BtnLink, SubmitBtnTxt, ActionBtn, ActionBtnTxt } from '../../components/Botões';
-import { MutedLink } from '../../components/MutedLink';
+import { Container, Logo, Form, Input,SubmitBtn, BtnLink, SubmitBtnTxt, ActionBtn, ActionBtnTxt, MutedLink } from '../../components/Estilos';
+
 
 
 import logo from '../../../assets/icon.png';

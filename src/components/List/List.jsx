@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { FlatList, StatusBar} from 'react-native';
 import { corPrimaria} from '../../components/UI/variaveis';
@@ -7,15 +6,11 @@ import { FontAwesome } from '@expo/vector-icons';
 import useToDoList from '../../hooks/useListaHook';
 import { isTryStatement } from 'typescript';
 
-const Lista = () => {
+const List = () => {
     const [produto, setProduto] = useState('');
     const [state, add, check, del] = useToDoList();
     return (
-        <MainListContainer>
-            <StatusBar
-                barStyle='dark-content'
-            />
-            <TitleListContainer><Title>LISTA DE COMPRAS</Title></TitleListContainer>            
+        <MainListContainer>                
             <InputListContainer >                
                 <InputList
                    placeholder="Adicionar Produto"
@@ -52,4 +47,4 @@ const Lista = () => {
     )
 }
 
-export default Lista;
+export default List;

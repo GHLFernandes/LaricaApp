@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, StatusBar } from 'react-native';
-import { Container } from '../../components/Container';
+import { Container } from '../../components/Estilos';
 
 const Receitas = () => {
     return (
