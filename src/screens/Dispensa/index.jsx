@@ -1,19 +1,59 @@
 import React, { useState, useEffect } from 'react';
-import { Text, TouchableOpacity, Modal, View } from 'react-native';
-import { Container } from '../../components/Estilos';
+import { Text, TouchableOpacity, Modal, View, FlatList } from 'react-native';
+import { Container, TitleContainer, DispensaContainer,InputList, MainListContainer, InputListContainer,ListAddBtn, ItemsContainer, ItemBtn, DelBtn, ItemChecked } from '../../components/Estilos';
 import Scanner from '../../components/Scanner';
 import { FontAwesome } from '@expo/vector-icons';
-
+import useToDoList from '../../hooks/useListaHook';
+import { corPrimaria} from '../../components/UI/variaveis';
 const Dispensa = () => {
     const [modalZonesVisible, setModalZonesVisible] = useState(false);
-
+    const [produto, setProduto] = useState('');
+    const [state, add, check, del] = useToDoList();
     return (
         <Container>
+            <DispensaContainer>
+            <TitleContainer>
             <Text>DISPENSA</Text>
-            <TouchableOpacity
-                onPress={() => setModalZonesVisible(true)}>
-                <Text>Abrir QRCode</Text><FontAwesome name="plus" size={30} color="#fff" />
-            </TouchableOpacity>
+            </TitleContainer> 
+            <MainListContainer> 
+            <InputListContainer >                
+                <InputList
+                   placeholder="Adicionar Produto"
+                   placeholderTextColor={'black'}
+                   value={produto}
+                   onChangeText={text => setProduto(text)}
+                 />
+                <ListAddBtn
+                    onPress={() => {
+                        add(produto);
+                        setProduto('');
+                    }} >
+                    <FontAwesome name="plus" size={30} color={corPrimaria} style={{marginLeft: 150}} />
+                </ListAddBtn>
+                <TouchableOpacity
+                    onPress={() => setModalZonesVisible(true)}>
+                    <FontAwesome name="qrcode" size={30} color="#000" />
+                 </TouchableOpacity>
+            </InputListContainer>
+
+            <FlatList
+                data={state}
+                renderItem={({ item }) => (
+                    <ItemsContainer>
+                        <ItemBtn
+                            onPress={() => { check(item.id) }}>
+                            <ItemChecked check={item.check}>{item.title}</ItemChecked>
+                        </ItemBtn>
+
+                        <DelBtn 
+                            onPress={() => { del(item.id) }}>
+                            <FontAwesome name="trash-o" size={25} color="red" />
+                        </DelBtn>
+                    </ItemsContainer>
+                )
+                } />
+        </MainListContainer>                               
+            
             <Modal
                 animationType="slide"
                 transparent={true}
@@ -59,6 +99,7 @@ const Dispensa = () => {
                     </View>
                 </View>
             </Modal >
+            </DispensaContainer> 
         </Container>
     );
 };

@@ -34,6 +34,20 @@ export const Container = styled.SafeAreaView.attrs({
     justifyContent: 'center',
 })
 ``;
+export const TitleContainer = styled.View.attrs({
+  backgroundColor: fundoEscuro,
+  height: 50,
+  alignItems: 'center',
+  justifyContent: 'center',
+  width: '100%',
+  
+})``
+
+export const DispensaContainer = styled.View.attrs({
+   alignItems: 'center',
+   width: '100%',
+   flex: 1
+})``
 
 export const HeaderContainer = styled.View.attrs({
     flexDirection: 'row',
@@ -63,7 +77,7 @@ export const MainListContainer = styled.View.attrs({
 })``
 export const InputListContainer = styled.View.attrs({
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
     alignItems: 'center',
     paddingHorizontal: 15,    
     borderRadius: 2,
