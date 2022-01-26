@@ -6,12 +6,8 @@ const inicialState = []
 const reducer = (state, action) => {
     switch (action.type) {
         case 'ADD':
-<<<<<<< HEAD
             if(action.item.title !== ''){
             return [...state, action.item];} else {alert('Digite um produto!')}//retorna um array q é a concatenação atual do array (state) com o novo q está chegando
-=======
-            return [...state, action.item]; //retorna um array q é a concatenação atual do array (state) com o novo q está chegando
->>>>>>> 6f8a9be... feat: desenvolvimento da Lista de Compras
         case 'CHECK':
             return state.map(item => {
                 if (item.id === action.id) {
