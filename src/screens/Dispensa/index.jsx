@@ -16,7 +16,7 @@ const Dispensa = () => {
             <Title>DISPENSA</Title>
             </TitleContainer> 
             <MainListContainer> 
-            <InputListContainer >                
+            <InputListContainer style={{paddingHorizontal: 15}} >                
                 <InputList
                    placeholder="Adicionar Produto"
                    placeholderTextColor={'black'}
@@ -28,11 +28,11 @@ const Dispensa = () => {
                         add(produto);
                         setProduto('');
                     }} >
-                    <FontAwesome name="plus" size={30} color={corPrimaria} style={{marginLeft: Platform.OS === 'ios' ? 150: 170}} />
+                    <FontAwesome name="plus" size={30} color={corPrimaria} style={{marginLeft: Platform.OS === 'ios' ? 20:30}} />
                 </ListAddBtn>
                 <TouchableOpacity
                     onPress={() => setModalZonesVisible(true)}>
-                    <FontAwesome name="qrcode" size={30} color="#000" style={{marginLeft: Platform.OS === 'ios' ? 0: 15}} />
+                    <FontAwesome name="qrcode" size={30} color="#000" style={{marginLeft: Platform.OS === 'ios' ? 10: 15}} />
                  </TouchableOpacity>
             </InputListContainer>
 
