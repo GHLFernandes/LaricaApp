@@ -23,6 +23,7 @@
         "expo-font": "~10.0.4",
         "expo-splash-screen": "~0.14.1",
         "expo-status-bar": "~1.2.0",
+        "export": "^0.1.337",
         "express": "^4.17.2",
         "firebase": "8.2.3",
         "react": "17.0.1",
