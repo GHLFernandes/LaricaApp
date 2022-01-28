@@ -8,6 +8,8 @@ const windowWidth = Dimensions.get('window').width;
 // Área de Inputs --------------------------------------------
 export const InputList = styled.TextInput.attrs({    
     backgroundColor: "transparent", 
+    width: "74%",
+    height: 45,
     color: "#000"
 
 })``
@@ -19,7 +21,7 @@ height: 42px;
 border: 1px solid rgba(200, 200, 200, 0.9);
 border-radius: 12px;
 margin-top: 10px;
-padding: 10px 10px;
+padding: 5px;
 font-size: 12px;
 font-family: MontserratRegular;
 border-color: ${corPrimariaClaro};
@@ -77,9 +79,9 @@ export const MainListContainer = styled.View.attrs({
 })``
 export const InputListContainer = styled.View.attrs({
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
     alignItems: 'center',
-    paddingHorizontal: Platform.OS === 'ios' ? 20 : 30,    
+    // paddingHorizontal: Platform.OS === 'ios' ? 5 : 20,    
     borderRadius: 2,
     borderWidth: 2,
     borderColor: corPrimaria,
