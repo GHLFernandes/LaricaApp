@@ -32,7 +32,7 @@ const Dispensa = () => {
                 </ListAddBtn>
                 <TouchableOpacity
                     onPress={() => setModalZonesVisible(true)}>
-                    <FontAwesome name="qrcode" size={30} color="#000" />
+                    <FontAwesome name="qrcode" size={30} color="#000" style={{marginLeft: Platform.OS === 'ios' ? 0: 15}} />
                  </TouchableOpacity>
             </InputListContainer>
 
