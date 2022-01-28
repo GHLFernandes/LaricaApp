@@ -77,9 +77,9 @@ export const MainListContainer = styled.View.attrs({
 })``
 export const InputListContainer = styled.View.attrs({
     flexDirection: 'row',
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
     alignItems: 'center',
-    paddingHorizontal: 15,    
+    paddingHorizontal: Platform.OS === 'ios' ? 20 : 30,    
     borderRadius: 2,
     borderWidth: 2,
     borderColor: corPrimaria,
@@ -87,6 +87,7 @@ export const InputListContainer = styled.View.attrs({
     width:"100%",
     height: 50
 })``
+
 
 export const TitleListContainer = styled.View.attrs({
     backgroundColor: fundoEscuro,

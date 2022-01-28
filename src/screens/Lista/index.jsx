@@ -5,7 +5,7 @@ import { corPrimaria} from '../../components/UI/variaveis';
 import {InputList, MainListContainer, InputListContainer, TitleListContainer, ListAddBtn, ItemsContainer, Title, ItemBtn, DelBtn, ItemChecked} from '../../components/Estilos/index';
 import { FontAwesome } from '@expo/vector-icons';
 import useToDoList from '../../hooks/useListaHook';
-import { isTryStatement } from 'typescript';
+
 
 const Lista = () => {
     const [produto, setProduto] = useState('');
